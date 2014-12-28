@@ -9,35 +9,13 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using log4net;
-using log4net.Config;
-using log4net.Core;
-
-namespace CKAN.CmdLine
-{
-    internal class MainClass
-    {
-        private static readonly ILog log = LogManager.GetLogger(typeof (MainClass));
-
-        /*
-         * When the STAThread is applied, it changes the apartment state of the current thread to be single threaded. 
-         * Without getting into a huge discussion about COM and threading,
-         * this attribute ensures the communication mechanism between the current thread an
-         * other threads that may want to talk to it via COM.  When you're using Windows Forms,
-         * depending on the feature you're using, it may be using COM interop in order to communicate with
-         * operating system components.  Good examples of this are the Clipboard and the File Dialogs. 
-         */
-        [STAThread]
-        public static int Main(string[] args)
-        {
-
+using log4netfasf
             BasicConfigurator.Configure();
             LogManager.GetRepository().Threshold = Level.Warn;
             log.Debug("CKAN started");
 
             IUser user = new ConsoleUser();
-            CheckMonoVersion(user, 3, 1, 0);
-
-            // If we're starting with no options then invoke the GUI instead.
+            CheckMonoVfsafaf're starting with no options then invoke the GUI instead.
 
             if (args.Length == 0)
             {
