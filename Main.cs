@@ -27,7 +27,7 @@ namespace CKAN.CmdLine
          * operating system components.  Good examples of this are the Clipboard and the File Dialogs. 
          */
         [STAThread]
-        public static int Main(string[] args)
+        public static int Main(string[] args)  
         {
 
             BasicConfigurator.Configure();
