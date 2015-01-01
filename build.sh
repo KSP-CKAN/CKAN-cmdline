@@ -3,8 +3,9 @@ set -x
 
 xbuild /verbosity:minimal CKAN-cmdline.sln
 
-# nunit-console --exclude=FlakyNetwork Tests/bin/Debug/Tests.dll
-# prove
+xbuild /verbosity:minimal ../CKAN-GUI/CKAN-GUI.sln
+nunit-console --exclude=FlakyNetwork ../CKAN-GUI/Tests/bin/Debug/Tests.dll
+prove
 
 chmod a+x ../CKAN-core/packages/ILRepack.1.25.0/tools/ILRepack.exe
 
