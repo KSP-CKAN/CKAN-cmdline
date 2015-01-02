@@ -175,6 +175,9 @@ namespace CKAN.CmdLine
 
     internal class UpdateOptions : CommonOptions
     {
+        [Option('a', "all", HelpText = "All configured repositories")]
+        public string all { get; set; }
+
         // This option is really meant for devs testing their CKAN-meta forks.
         [Option('r', "repo", HelpText = "CKAN repository to use (experimental!)")]
         public string repo { get; set; }
