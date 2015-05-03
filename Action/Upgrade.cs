@@ -85,6 +85,7 @@ namespace CKAN.CmdLine
                             {
                                 // Check if upgrades are available
                                 CkanModule latest = ksp.Registry.LatestAvailable(mod.Key, ksp.Version());
+                                if(latest==null) continue;
 
                                 if (latest.version.IsGreaterThan(mod.Value))
                                 {
